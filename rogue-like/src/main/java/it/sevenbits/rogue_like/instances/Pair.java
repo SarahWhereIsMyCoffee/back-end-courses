@@ -3,13 +3,13 @@ package it.sevenbits.rogue_like.instances;
 /**
  * This is a special class for the storage my items (armors and weapons) - <item name + item itself>
  * @param <String> - name of the item that i've put in
- * @param <Object> - my item in the Inventory/Chest
+ * @param <T> - my item in the Inventory/Chest
  */
-public class Pair<String, Object> {
+public class Pair<String, T> {
     private String name;
-    private Object value;
+    private T value;
 
-    public Pair(String name, Object value) {
+    public Pair(String name, T value) {
         this.name = name;
         this.value = value;
     }
@@ -22,11 +22,11 @@ public class Pair<String, Object> {
         this.name = name;
     }
 
-    public Object getValue() {
+    public T getValue() {
         return value;
     }
 
-    public void setValue(Object value) {
+    public void setValue(T value) {
         this.value = value;
     }
 }

@@ -1,5 +1,6 @@
 package it.sevenbits.rogue_like.instances;
 
+import com.sun.java.accessibility.util.GUIInitializedMulticaster;
 import it.sevenbits.rogue_like.interfaces.IInventory;
 
 import java.util.HashMap;
