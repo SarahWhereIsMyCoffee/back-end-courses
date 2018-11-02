@@ -1,5 +1,10 @@
 package it.sevenbits.rogue_like.instances;
 
+/**
+ * This is a special class for the storage my items (armors and weapons) - <item name + item itself>
+ * @param <String> - name of the item that i've put in
+ * @param <Object> - my item in the Inventory/Chest
+ */
 public class Pair<String, Object> {
     private String name;
     private Object value;

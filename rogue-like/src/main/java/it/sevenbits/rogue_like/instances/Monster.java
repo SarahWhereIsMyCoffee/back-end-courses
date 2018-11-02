@@ -3,6 +3,7 @@ package it.sevenbits.rogue_like.instances;
 import it.sevenbits.rogue_like.interfaces.IMonster;
 
 public class Monster implements IMonster {
+
     @Override
     public void getAttacked(int attackValue) {
 
@@ -11,6 +12,11 @@ public class Monster implements IMonster {
     @Override
     public void setHealthValue(int healthValue) {
 
+    }
+
+    @Override
+    public int getHealthValue() {
+        return 0;
     }
 
     @Override

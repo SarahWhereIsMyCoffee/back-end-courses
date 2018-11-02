@@ -3,28 +3,28 @@ package it.sevenbits.rogue_like.instances;
 import it.sevenbits.rogue_like.interfaces.IMoney;
 
 public class Gold implements IMoney {
-    private int moneyValue;
+    private int goldAmount;
 
-
-    @Override
-    public void increaseMoneyValue(int deltaMoneyValue) {
-        moneyValue += deltaMoneyValue;
+    public Gold() {
     }
 
     @Override
-    public void dicreaseMoneyValue(int deltaMoneyValue) {
-        moneyValue -= deltaMoneyValue;
+    public void increase(int deltaGoldAmount) {
+        goldAmount += deltaGoldAmount;
     }
 
     @Override
-    public int getMoneyValue() {
-        return moneyValue;
+    public void dicrease(int deltaGoldAmount) {
+        goldAmount -= deltaGoldAmount;
     }
 
     @Override
-    public void setMoneyValue(int moneyValue) {
-        this.moneyValue = moneyValue;
+    public int getValue() {
+        return goldAmount;
     }
 
-
+    @Override
+    public void setValue(int goldAmount) {
+        this.goldAmount = goldAmount;
+    }
 }
