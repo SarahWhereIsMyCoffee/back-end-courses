@@ -1,4 +1,4 @@
-package it.sevenbits.rogue_like.instances;
+package it.sevenbits.rogue_like.util;
 
 /**
  * This is a special class for the storage my items (armors and weapons) - <item name + item itself>

@@ -1,6 +1,11 @@
-package it.sevenbits.rogue_like.instances;
+package it.sevenbits.rogue_like.character.extend.player.instances;
 
-import it.sevenbits.rogue_like.interfaces.IPlayer;
+import it.sevenbits.rogue_like.armor.IArmor;
+import it.sevenbits.rogue_like.character.extend.player.IPlayer;
+import it.sevenbits.rogue_like.container.chest.instances.Chest;
+import it.sevenbits.rogue_like.container.inventory.instances.Inventory;
+import it.sevenbits.rogue_like.util.Pair;
+import it.sevenbits.rogue_like.weapon.IWeapon;
 
 import java.util.HashMap;
 
@@ -15,121 +20,95 @@ public class Player implements IPlayer {
         inventory.setMoneyValue(10);
     }
 
-
-    @Override
     public void getAttacked(int attackValue) {
         // healthValue -= attackValue
     }
 
-    @Override
     public void setHealthValue(int healthValue) {
         this.healthValue = healthValue;
     }
 
-    @Override
     public int getHealthValue() {
         return healthValue;
     }
 
-    @Override
     public void getWeaponsFromChest(Chest chest) {
         inventory.getWeaponsFromChest(chest);
     }
 
-    @Override
     public void getArmorsFromChest(Chest chest) {
         inventory.getArmorsFromChest(chest);
     }
 
-    @Override
     public void getMoneyFromChest(Chest chest) {
         inventory.getMoneyFromChest(chest);
     }
 
-    @Override
     public int attack() {
         return 0;
     }
 
-    @Override
     public Object getWeaponItem(String itemName) {
        return inventory.getWeaponItem(itemName);
     }
 
-    @Override
     public Object getArmorItem(String itemName) {
         return inventory.getArmorItem(itemName);
     }
 
-    @Override
-    public void putWeaponItem(Pair<String, Object> weapon) {
+    public void putWeaponItem(Pair<String, IWeapon> weapon) {
         inventory.putWeaponItem(weapon);
     }
 
-    @Override
-    public void putArmorItem(Pair<String, Object> armor) {
+    public void putArmorItem(Pair<String, IArmor> armor) {
         inventory.putArmorItem(armor);
     }
 
-    @Override
     public void removeWeaponItem(String itemName) {
     }
 
-    @Override
     public void removeArmorItem(String itemName) {
     }
 
-    @Override
     public void setMoneyValue(int moneyValue) {
     }
 
-    @Override
     public int getMoneyAmount() {
         return inventory.getMoneyAmount();
     }
 
-    @Override
     public void putMoney(int moneyValue) {
     }
 
-    @Override
     public void dicreaseMoneyValue(int deltaMoneyValue) {
     }
 
-    @Override
     public void increaseMoneyValue(int deltaMoneyValue) {
     }
 
-    @Override
-    public void getWeaponsNames() {
-        inventory.getWeaponsNames();
+    public void getWeaponsNamesWithCharacteristics() {
+        inventory.getWeaponsNamesWithCharacteristics();
     }
 
-    @Override
-    public void getArmorsNames() {
-        inventory.getArmorsNames();
+    public void getArmorsNamesWithCharacteristics() {
+        inventory.getArmorsNamesWithCharacteristics();
     }
 
-    @Override
-    public HashMap<String, Object> getAllWeapons() {
+    public HashMap<String, IWeapon> getAllWeapons() {
         return inventory.getAllWeapons();
     }
 
-    @Override
-    public HashMap<String, Object> getAllArmors() {
+    public HashMap<String, IArmor> getAllArmors() {
         return inventory.getAllArmors();
     }
 
-    @Override
     public void move(int deltaCoordX, int deltaCoordY) {
     }
 
-    @Override
     public int getCoordX() {
         return coordX;
     }
 
-    @Override
     public int getCoordY() {
         return coordY;
     }

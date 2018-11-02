@@ -1,6 +1,6 @@
-package it.sevenbits.rogue_like.instances;
+package it.sevenbits.rogue_like.character.extend.monster.instances;
 
-import it.sevenbits.rogue_like.interfaces.IMonster;
+import it.sevenbits.rogue_like.character.extend.monster.IMonster;
 
 public class Monster implements IMonster {
 

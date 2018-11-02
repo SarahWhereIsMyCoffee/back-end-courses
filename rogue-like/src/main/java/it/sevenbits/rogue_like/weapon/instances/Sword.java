@@ -1,6 +1,6 @@
-package it.sevenbits.rogue_like.instances;
+package it.sevenbits.rogue_like.weapon.instances;
 
-import it.sevenbits.rogue_like.interfaces.IWeapon;
+import it.sevenbits.rogue_like.weapon.IWeapon;
 
 public class Sword implements IWeapon {
     private int attackValue;

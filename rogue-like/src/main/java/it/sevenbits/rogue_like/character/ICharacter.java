@@ -1,4 +1,4 @@
-package it.sevenbits.rogue_like.interfaces;
+package it.sevenbits.rogue_like.character;
 
 public interface ICharacter {
     public void getAttacked(int attackValue);

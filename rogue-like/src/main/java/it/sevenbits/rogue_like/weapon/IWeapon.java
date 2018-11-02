@@ -1,4 +1,4 @@
-package it.sevenbits.rogue_like.interfaces;
+package it.sevenbits.rogue_like.weapon;
 
 public interface IWeapon {
     public void setAttackValue(int weaponAttackValue);

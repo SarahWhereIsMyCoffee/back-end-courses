@@ -1,13 +1,13 @@
-package it.sevenbits.rogue_like.instances;
+package it.sevenbits.rogue_like.armor.instances;
 
-import it.sevenbits.rogue_like.interfaces.IArmor;
+import it.sevenbits.rogue_like.armor.IArmor;
 
 public class Helm implements IArmor {
     private int durabilityValue;
     private int protectionValue;
     private String name;
 
-    public Helm(String name, int durabilityValue, int protectionValue) {
+    public Helm(String name, int protectionValue, int durabilityValue) {
         setDurabilityValue(durabilityValue);
         setProtectionValue(protectionValue);
         setName(name);

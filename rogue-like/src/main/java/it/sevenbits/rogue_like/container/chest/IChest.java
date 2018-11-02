@@ -1,4 +1,7 @@
-package it.sevenbits.rogue_like.interfaces;
+package it.sevenbits.rogue_like.container.chest;
+
+import it.sevenbits.rogue_like.container.IContainer;
+
 /**
  * This is an interface for the creating some Chests in the game.
  * This is looks like IContainer, but in the future this is might be changed -

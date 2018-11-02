@@ -1,4 +1,6 @@
-package it.sevenbits.rogue_like.interfaces;
+package it.sevenbits.rogue_like.container.inventory;
+
+import it.sevenbits.rogue_like.container.IContainer;
 
 /**
  * This is an interface for the creating the Inventory of the player.
