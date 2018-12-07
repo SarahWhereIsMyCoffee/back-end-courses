@@ -40,7 +40,9 @@ public class Main {
             bufferedWriter.write(", ");
             bufferedWriter.write(paths[i].toAbsolutePath().toString());
 
-
+            if (i % 5 == 0) {
+                bufferedWriter.flush();
+            }
             bufferedWriter.write("\n");
         }
         bufferedWriter.flush();
