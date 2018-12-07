@@ -5,19 +5,13 @@ import org.junit.Before;
 import org.junit.Assert;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
-
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Objects;
-
 import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.anyLong;
 import static org.mockito.Mockito.any;
-import static org.mockito.Mockito.when;
 
 public class FileScannerTest {
     private ICollection collection;
