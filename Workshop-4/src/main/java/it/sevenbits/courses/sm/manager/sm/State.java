@@ -5,7 +5,7 @@ import java.util.Objects;
 public class State {
     private final String currentState;
 
-    State(final String currentState) {
+    public State(final String currentState) {
         this.currentState = currentState;
     }
 

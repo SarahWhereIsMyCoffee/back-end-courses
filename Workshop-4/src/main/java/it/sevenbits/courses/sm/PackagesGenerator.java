@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class PackagesGenerator {
     private final String[] messages = {
-            "First", "Second", "Third", "Hi Mark", "Msg"
+            "First ", "Second ", "Third ", "Hi Mark ", "Msg "
     };
     private String trash = "************";
     private String senselessMsg = "##(!@)";

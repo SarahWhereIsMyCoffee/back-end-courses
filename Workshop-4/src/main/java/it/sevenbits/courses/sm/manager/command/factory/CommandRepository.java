@@ -1,0 +1,47 @@
+package it.sevenbits.courses.sm.manager.command.factory;
+
+import it.sevenbits.courses.sm.manager.command.INetworkManagerCommand;
+import it.sevenbits.courses.sm.manager.command.PackageReceivedCommand;
+import it.sevenbits.courses.sm.manager.command.ShowMessageCommand;
+import it.sevenbits.courses.sm.manager.command.TrashIgnoredCommand;
+import it.sevenbits.courses.sm.manager.command.messageContainer.ArgsBuffer;
+import it.sevenbits.courses.sm.manager.command.messageContainer.MessageBuffer;
+import it.sevenbits.courses.sm.manager.sm.Pair;
+import it.sevenbits.courses.sm.manager.sm.State;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class CommandRepository {
+    private INetworkManagerCommand packageReceivedCommand;
+    private INetworkManagerCommand trashIgnoredCommand;
+    private INetworkManagerCommand showMessageCommand;
+
+    private final State defaultState = new State("IGNORE");
+    private final State listenState = new State("LISTEN");
+    private final State stubSuspicion = new State("TRASH_SUSPICION");
+
+    private Map<Pair<State, String>, INetworkManagerCommand> commandMap;
+
+    public CommandRepository(ArgsBuffer argsBuffer, MessageBuffer messageBuffer) {
+        packageReceivedCommand = new PackageReceivedCommand(argsBuffer, messageBuffer);
+        trashIgnoredCommand = new TrashIgnoredCommand();
+        showMessageCommand = new ShowMessageCommand(messageBuffer);
+
+        commandMap = new HashMap<>();
+
+        commandMap.put(new Pair<>(listenState, "MESSAGE"), packageReceivedCommand);
+        commandMap.put(new Pair<>(listenState, "TRASH"), trashIgnoredCommand);
+
+        commandMap.put(new Pair<>(stubSuspicion, "MESSAGE"), packageReceivedCommand);
+        commandMap.put(new Pair<>(stubSuspicion, "TRASH"), showMessageCommand);
+
+        commandMap.put(new Pair<>(defaultState, "MESSAGE"), packageReceivedCommand);
+        commandMap.put(new Pair<>(defaultState, "TRASH"), trashIgnoredCommand);
+    }
+
+    public INetworkManagerCommand getCommand(State state, String string) {
+        return commandMap.get(new Pair<>(state, string));
+    }
+
+}

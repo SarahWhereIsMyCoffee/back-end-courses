@@ -15,8 +15,10 @@ public class Main {
 
         PackagesGenerator packagesGenerator = new PackagesGenerator();
         Thread createMessagesThread = packagesGenerator.packagesFillerTaskOne(nm,network);
+        Thread createMessagesThreadTwo = packagesGenerator.packagesFillerTaskTwo(nm,network);
 
-        createMessagesThread.start();
+
+        createMessagesThreadTwo.start();
         nm.listen(network);
     }
 }
