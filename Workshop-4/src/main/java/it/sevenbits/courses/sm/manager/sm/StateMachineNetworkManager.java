@@ -21,7 +21,7 @@ public class StateMachineNetworkManager implements INetworkManager {
     private final StateTransition stateTransition;
 
     private INetworkManagerCommand command;
-    private final ArgsBuffer argsBuffer = new ArgsBuffer();
+    private final ArgsBuffer argsBuffer = new ArgsBuffer();//pisun sobaki
     private MessageBuffer messageBuffer = new MessageBuffer();
     private final CommandFactory commandFactory = new CommandFactory(argsBuffer, messageBuffer);
 
