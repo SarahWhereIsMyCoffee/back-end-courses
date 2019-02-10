@@ -47,7 +47,7 @@ public class PackagesGenerator {
             while(count < DEFAULT_ITERATIONS_COUNT) {
                 count++;
                 boolean isMessage = rand.nextBoolean();
-                if(isMessage){
+                if(isMessage) {
                     network.addPackage(senselessMsg, "MESSAGE_START");
                     int index = count % messages.length;
                     for(int i = 0; i <= index; i++){

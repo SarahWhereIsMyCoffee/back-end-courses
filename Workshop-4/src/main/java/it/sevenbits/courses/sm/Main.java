@@ -14,9 +14,8 @@ public class Main {
         final INetwork network = new Network(500);
 
         PackagesGenerator packagesGenerator = new PackagesGenerator();
-        Thread createMessagesThread = packagesGenerator.packagesFillerTaskOne(nm,network);
+       // Thread createMessagesThread = packagesGenerator.packagesFillerTaskOne(nm,network);
         Thread createMessagesThreadTwo = packagesGenerator.packagesFillerTaskTwo(nm,network);
-
 
         createMessagesThreadTwo.start();
         nm.listen(network);
